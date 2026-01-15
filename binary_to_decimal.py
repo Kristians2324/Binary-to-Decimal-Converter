@@ -6,6 +6,11 @@ def binary_to_decimal(binary_string):
     for digit in reversed(binary_string):
         if digit == '1':
             decimal_value += 2 ** power
+        elif digit == '0':
+            pass
+        else:
+            # This is the edge case for invalid input
+            return "Invalid input! Please only use 0 and 1."
         power += 1
     return decimal_value
 # Get user input
